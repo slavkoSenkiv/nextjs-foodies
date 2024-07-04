@@ -16,8 +16,8 @@ export default function ShareMealPage() {
           <div className={classes.row}>
             <p>
               <label htmlFor="name">Your name</label>
-              <input type="text" id="name" name="name" required />
-            </p>
+{              <input type="text" id="name" name="name" required />
+}            </p>
             <p>
               <label htmlFor="email">Your email</label>
               <input type="email" id="email" name="email" required />
