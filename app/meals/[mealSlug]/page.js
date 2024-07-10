@@ -2,7 +2,6 @@ import Image from 'next/image';
 import { getMeal } from '@/lib/meals';
 import classes from './page.module.css';
 import { notFound } from 'next/navigation';
-import s3name from '@/sensitiveData';
 export default function MealDetailsPage({ params }) {
   const meal = getMeal(params.mealSlug);
 
@@ -16,7 +15,7 @@ export default function MealDetailsPage({ params }) {
       <header className={classes.header}>
         <div className={classes.image}>
           <Image
-            src={`https://${s3name}.s3.amazonaws.com/${meal.image}`}
+            src={`https://${process.env.S3_BUCKET_NAME}.s3.amazonaws.com/${meal.image}`}
             alt={meal.title}
             fill
           />
