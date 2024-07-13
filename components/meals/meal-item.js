@@ -8,7 +8,7 @@ export default function MealItem({ title, slug, image, summary, creator }) {
       <header>
         <div className={classes.image}>
           <Image
-            src={`https://${process.env.S3_BUCKET_NAME}.s3.amazonaws.com/${image}`}
+            src={`https://slavsenkiv-nextjs-foodies-users-images.s3.amazonaws.com/${image}`}
             alt={title}
             fill
           />

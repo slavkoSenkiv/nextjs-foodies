@@ -15,7 +15,7 @@ export default function MealDetailsPage({ params }) {
       <header className={classes.header}>
         <div className={classes.image}>
           <Image
-            src={`https://${process.env.S3_BUCKET_NAME}.s3.amazonaws.com/${meal.image}`}
+            src={`https://slavsenkiv-nextjs-foodies-users-images.s3.amazonaws.com/${meal.image}`}
             alt={meal.title}
             fill
           />

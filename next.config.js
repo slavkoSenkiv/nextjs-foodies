@@ -5,7 +5,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: `${process.env.S3_BUCKET_NAME}.s3.amazonaws.com`,
+        hostname: 'slavsenkiv-nextjs-foodies-users-images.s3.amazonaws.com',
         port: '',
         pathname: '/**',
       },
@@ -13,4 +13,8 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig
+module.exports = {
+  images: {
+    domains: ['slavsenkiv-nextjs-foodies-users-images.s3.amazonaws.com'],
+  },
+};
