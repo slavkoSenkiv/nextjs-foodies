@@ -1,11 +1,14 @@
 /** @type {import('next').NextConfig} */
 
+require('dotenv').config();
+
+
 const nextConfig = {
   images: {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'slavsenkiv-nextjs-foodies-users-images.s3.amazonaws.com',
+        hostname: `${process.env.AWS_S3_BUCKET_NAME}.s3.amazonaws.com`,
         port: '',
         pathname: '/**',
       },
@@ -15,6 +18,6 @@ const nextConfig = {
 
 module.exports = {
   images: {
-    domains: ['slavsenkiv-nextjs-foodies-users-images.s3.amazonaws.com'],
+    domains: [`${process.env.AWS_S3_BUCKET_NAME}.s3.amazonaws.com`],
   },
 };
